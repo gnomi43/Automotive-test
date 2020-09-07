@@ -130,8 +130,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     inputsForm.forEach( (item, index) => {
       item.addEventListener("input", (event) => {
-        console.log(event.target.value !== "");
-
 
         if(event.target.value !== ""){
           legendsInputsForm[index].classList.remove("visually-hidden");
