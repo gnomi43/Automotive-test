@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kodix Automotive</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper container">
+            <a href="/" class="header__link">
+                <img class="header__logo-img" src="./dist/logo.png" alt="Logo">
+            </a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__wrapper container">
+            <h1 class="main__title">¡Ay caramba!</h1>
+
+            <section class="form">
+                <form class="main__form" method="POST">
+                    <fieldset class="main__form-fieldset-input span-mob">
+                        <legend class="input__legend visually-hidden">Название</legend>
+                        <input class="main__form-input" name="name" type="text" placeholder="Название" required />
+                    </fieldset>
+                    <fieldset class="main__form-fieldset-input">
+                        <legend class="input__legend visually-hidden">Год</legend>
+                        <input class="main__form-input" name="year" type="number" min="1970" max="2021" step="1" placeholder="Год" required />
+                    </fieldset>
+                    <fieldset class="main__form-fieldset-input">
+                        <legend class="input__legend visually-hidden">Цена</legend>
+                        <input class="main__form-input" name="price" type="number" placeholder="Цена" required />
+                    </fieldset>
+                    <fieldset class="main__form-fieldset-input span-2">
+                        <legend class="input__legend visually-hidden">Описание</legend>
+                        <input class="main__form-input" name="description" type="text" placeholder="Описание" />
+                    </fieldset>
+
+                    <fieldset class="span-mob">
+                        <legend class="main__form-color-title">Цвета</legend>
+                        <ul class="main__form-color">
+                            <li>
+                                <input class="color-radio" type="radio" name="color" id="color-value-white" value="white" checked />
+                                <label class="color-label white" for="color-value-white"></label>
+                            </li>
+                            <li>
+                                <input class="color-radio" type="radio" name="color" id="color-value-black" value="black" />
+                                <label class="color-label black" for="color-value-black"></label>
+                            </li>
+                            <li>
+                                <input class="color-radio" type="radio" name="color" id="color-value-grey" value="grey" />
+                                <label class="color-label grey" for="color-value-grey"></label>
+                            </li>
+                            <li>
+                                <input class="color-radio" type="radio" name="color" id="color-value-red" value="red" />
+                                <label class="color-label red" for="color-value-red"></label>
+                            </li>
+                            <li>
+                                <input class="color-radio" type="radio" name="color" id="color-value-green" value="green" />
+                                <label class="color-label green" for="color-value-green"></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="status-mob">
+                        <Legend class="visually-hidden">Статус</Legend>
+                            <select class="main__form-status" name="status" required>
+                                <option class="main__form-option" value="" disabled selected style='display:none;'>Статус</option>
+                                <option class="main__form-option" value="in_stock">В наличии</option>
+                                <option class="main__form-option" value="pednding">Ожидается</option>
+                                <option class="main__form-option" value="out_of_stock">Нет в наличии</option>
+                            </select>
+                    </fieldset>
+
+                    <button class="button main__form-submit" type="submit"><span class="main__form-submit-text">Отправить</span></button>
+                    
+                </form>
+            </section>
+
+            <section class="avto">
+                <h2 class="avto__title">Автомобили в наличии</h2>
+                <div class="avto__warpper">
+                    <div class="avto__header">
+                        <div class="avto__header-item">Название</div>
+                        <div class="avto__header-item">Год</div>
+                        <div class="avto__header-item">Цвет</div>
+                        <div class="avto__header-item">Статус</div>
+                        <div class="avto__header-item">Цена</div>
+                        <div class="avto__header-item"></div>
+                    </div>
+                    <ul class="avto__list" id="avto-list">
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <p class="footer__text">© 2020 CAPTAIN QUACK</p>
+                <p class="footer__text">Десница тысячелетия и моллюск!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

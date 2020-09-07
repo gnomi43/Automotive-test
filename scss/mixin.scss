@@ -1,0 +1,14 @@
+@mixin  font-roboto {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0; 
+}
+
+@mixin grid-layout {
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 2fr 2fr 2fr;
+    align-items: center;
+}
